@@ -5,7 +5,8 @@ files and validating links in those files.
  
 ## Supported tags
 
-- `latest` 
+- `latest`
+- `0.0.11`
 - `0.0.10`
 - `0.0.9`
 
