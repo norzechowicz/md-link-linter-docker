@@ -5,7 +5,11 @@ files and validating links in those files.
  
 ## Supported tags
 
-- `latest` [(latest/Dockerfile)](latest/Dockerfile)
+- `latest` 
+- `0.0.10`
+- `0.0.9`
+
+Each tag matches [MD Link Linter](https://github.com/norzechowicz/md-link-linter) release. Latest represents unreleased version.
 
 ### Install
 
@@ -22,8 +26,13 @@ Display help:
 docker run -t --rm norberttech/md-link-linter --help
 ```
 
-Validate markdown files in current folder:
+Validate markdown files in a current folder:
 ```bash
 docker run -t --rm -v $PWD:/app norberttech/md-link-linter --exclude=vendor --exclude=node_modules . 
 ```
 
+### Building Image
+
+```bash
+docker build --build-arg MD_LINK_LINT_VERSION=1.x@dev --tag=norberttech/md-link-linter:latest .
+```
