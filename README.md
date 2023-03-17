@@ -35,5 +35,5 @@ docker run -t --rm -v $PWD:/app norberttech/md-link-linter --exclude=vendor --ex
 ### Building Image
 
 ```bash
-docker build --build-arg MD_LINK_LINT_VERSION=1.x@dev --tag=norberttech/md-link-linter:latest .
+docker build --build-arg MD_LINK_LINT_VERSION=1.x@dev --platform=linux/amd64 --tag=norberttech/md-link-linter:latest .
 ```
