@@ -5,11 +5,9 @@ ARG BASE_IMAGE=php:${BASE_IMAGE_TAG}
 
 FROM ${BASE_IMAGE}
 
-MAINTAINER Norbert Orzechowicz <contact@norbert.tech>
-
-ENV COMPOSER_HOME /composer
-ENV COMPOSER_ALLOW_SUPERUSER 1
-ENV PATH /composer/vendor/bin:$PATH
+ENV COMPOSER_HOME=/composer
+ENV COMPOSER_ALLOW_SUPERUSER=1
+ENV PATH=/composer/vendor/bin:$PATH
 ENV PHP_CONF_DIR=/usr/local/etc/php/conf.d
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
